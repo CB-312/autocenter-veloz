@@ -280,4 +280,4 @@ Distribuído sob a licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para 
 
 ## Autor
 
-**Gabriel**: projeto individual para o Estudo de Caso 3 da disciplina de Design Profissional, sob orientação do Prof. Sedenilso Antonio Machado.
+**Gabriel Kazuya Matsumoto**: projeto individual para o Estudo de Caso 3 da disciplina de Design Profissional, sob orientação do Prof. Sedenilso Antonio Machado.
