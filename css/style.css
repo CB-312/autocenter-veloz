@@ -1,0 +1,507 @@
+:root {
+    --vermelho: #d4161c;
+    --painel: #161616;
+    --borda: #2a2a2a;
+    --suave: #b8b8b8;
+    --fonte: Arial, Helvetica, sans-serif;
+    --recuo: 28px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font: 16px/1.6 var(--fonte);
+}
+
+h1, h2, h3, h4, .logo {
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 1.6rem;
+    margin: 32px 0 14px;
+}
+
+:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    min-height: 64px;
+    padding: 12px 5%;
+    background: var(--vermelho);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 36px;
+}
+
+nav {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.perfil {
+    position: relative;
+}
+
+.perfil > button {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#pm {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 210px;
+    background: var(--painel);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#pm a, #pm button {
+    padding: 12px 16px;
+    background: none;
+    color: #fff;
+    border: 0;
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#pm a:hover, #pm button:hover {
+    background: var(--vermelho);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 56px 5%;
+    border-bottom: 4px solid var(--vermelho);
+}
+
+.hero h2 {
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 4.5vw, 3.3rem);
+}
+
+.hero p {
+    max-width: 46ch;
+    margin-bottom: 24px;
+    color: var(--suave);
+}
+
+.carrossel {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, #222, #000);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carrossel div {
+    position: absolute;
+    inset: 0;
+    background: center / cover;
+    opacity: 0;
+    transition: opacity .8s;
+}
+
+.carrossel .on {
+    opacity: 1;
+}
+
+.btn, .acoes button, form button {
+    display: inline-block;
+    justify-self: start;
+    padding: 12px 22px;
+    background: var(--vermelho);
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    font: 700 1rem var(--fonte);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover, form button:hover {
+    background: #a90f14;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 5% 56px;
+}
+
+section {
+    padding-top: 56px;
+}
+
+main section > :not(h2, h3, #area-placa),
+#area-placa > :not(h3) {
+    margin-inline: var(--recuo);
+}
+
+h2.s {
+    margin-bottom: 24px;
+    padding-left: 14px;
+    border-left: 6px solid var(--vermelho);
+    font-size: 2.2rem;
+}
+
+.svcs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 16px;
+}
+
+.svc {
+    background: #7d0a0f;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.svc .top {
+    width: 100%;
+    height: 150px;
+    padding: 16px;
+    background: #c7141a;
+    color: #fff;
+    border: 0;
+    border-radius: 18px;
+    font: 700 1.2rem var(--fonte);
+    cursor: pointer;
+}
+
+.svc:hover:not(.fecha) .top,
+.svc.open .top {
+    border-radius: 18px 18px 0 0;
+}
+
+.svc .desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    padding: 0 18px;
+    font-size: .95rem;
+    text-align: center;
+    overflow: hidden;
+    transition: height .3s, padding .3s;
+}
+
+.svc:hover:not(.fecha) .desc,
+.svc.open .desc {
+    height: 120px;
+    padding: 18px;
+}
+
+table {
+    display: block;
+    width: auto;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+th, td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--borda);
+    text-align: left;
+}
+
+th {
+    background: var(--vermelho);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    padding: 20px;
+    background: var(--painel);
+    border: 1px solid var(--borda);
+    border-top: 3px solid var(--vermelho);
+    border-radius: 6px;
+}
+
+.card h4 {
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+}
+
+.card h4:not(:first-child) {
+    margin-top: 14px;
+}
+
+.card p, .card li {
+    color: var(--suave);
+    overflow-wrap: anywhere;
+}
+
+.card a {
+    color: #fff;
+}
+
+article {
+    margin-bottom: 16px;
+}
+
+.ic {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ic svg {
+    flex: none;
+    width: 24px;
+    height: 24px;
+    fill: var(--vermelho);
+}
+
+.et {
+    padding-left: 20px;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+    max-width: 520px;
+}
+
+.duas {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    max-width: 720px;
+}
+
+.duas > button, .duas > .msg {
+    grid-column: 1 / -1;
+}
+
+.duas label {
+    align-content: start;
+}
+
+.duas textarea {
+    min-height: 84px;
+}
+
+label {
+    display: grid;
+    gap: 4px;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    background: var(--painel);
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.msg {
+    margin-top: 8px;
+    color: var(--suave);
+}
+
+.ok {
+    color: #6fdc8c;
+}
+
+.erro {
+    color: #ff8a8a;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.acoes button:nth-child(2),
+.acoes button:nth-child(3) {
+    background: #3a3a3a;
+}
+
+.alt, .aum {
+    margin-top: 12px;
+}
+
+.etapa {
+    margin-top: 14px;
+}
+
+#consulta {
+    margin-top: 16px;
+}
+
+.texto {
+    max-width: 70ch;
+    margin: auto;
+    padding: 56px 5%;
+}
+
+.texto h1 {
+    margin-bottom: 24px;
+    font-size: 2.6rem;
+}
+
+.texto p {
+    margin: 0 28px 16px;
+    color: #ddd;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    padding: 40px 5%;
+    background: var(--painel);
+    border-top: 4px solid var(--vermelho);
+}
+
+footer h4 {
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+}
+
+footer p + h4 {
+    margin-top: 12px;
+}
+
+footer p, footer a {
+    display: block;
+    color: var(--suave);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.pgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 34px;
+    margin: 0 6px 6px 0;
+    padding: 4px 6px;
+    background: #fff;
+    color: #000;
+    border-radius: 4px;
+    font: 700 .9rem var(--fonte);
+}
+
+img.pg {
+    object-fit: contain;
+}
+
+.nota {
+    margin-top: 8px;
+    color: var(--suave);
+    font-size: .9rem;
+}
+
+@media (max-width: 800px) {
+    :root {
+        --recuo: 12px;
+    }
+
+    .hero, .svcs, .duas {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        order: 3;
+        flex-basis: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
