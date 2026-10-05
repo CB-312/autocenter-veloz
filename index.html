@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Auto Center Veloz | Oficina mecânica</title>
+    </head>
+    <body data-page="index">
+        <header>
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="">
+                Auto Center Veloz
+            </a>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
+                <a href="#status">Status</a>
+                <a href="funcionario.html" id="link-func" hidden>Gerenciar Serviços</a>
+            </nav>
+            <div class="perfil">
+                <button id="pf" aria-label="Perfil" aria-expanded="false">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/>
+                    </svg>
+                </button>
+                <div id="pm" hidden>
+                    <a id="mi-criar" href="conta.html#criar">Criar conta</a>
+                    <a id="mi-entrar" href="conta.html#entrar">Entrar em sua conta</a>
+                    <a id="mi-conta" href="conta.html#gerenciar" hidden>Gerenciar minha conta</a>
+                    <button id="sair" hidden>Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div>
+                <h2>Seu veículo sob boas mãos.</h2>
+                <p>Serviços rápidos com garantia. Processos que podem ser acompanhados pelos clientes do início até o fim.</p>
+                <a class="btn" href="#servicos">Saiba mais</a>
+            </div>
+            <div class="carrossel" aria-label="Fotos da oficina">
+                <div class="on" style="background-image:url(img/slide1.jpg)"></div>
+                <div style="background-image:url(img/slide2.jpg)"></div>
+                <div style="background-image:url(img/slide3.jpg)"></div>
+            </div>
+        </section>
+
+        <main>
+            <section id="servicos">
+                <h2 class="s">Serviços</h2>
+                <h3>O que fazemos</h3>
+                <div class="svcs">
+                    <div class="svc">
+                        <button class="top" aria-expanded="false">Revisão preventiva</button>
+                        <p class="desc">Checagem completa de fluidos, freios, suspensão e pneus para evitar surpresas na estrada.</p>
+                    </div>
+                    <div class="svc">
+                        <button class="top" aria-expanded="false">Óleo e filtros</button>
+                        <p class="desc">Troca de óleo e filtros com produtos adequados ao seu motor, seguindo o plano do fabricante.</p>
+                    </div>
+                    <div class="svc">
+                        <button class="top" aria-expanded="false">Freios</button>
+                        <p class="desc">Pastilhas, discos, fluido e diagnóstico de ruídos e perda de eficiência.</p>
+                    </div>
+                    <div class="svc">
+                        <button class="top" aria-expanded="false">Suspensão e direção</button>
+                        <p class="desc">Amortecedores, buchas, terminais e direção, para estabilidade e conforto.</p>
+                    </div>
+                    <div class="svc">
+                        <button class="top" aria-expanded="false">Elétrica e injeção</button>
+                        <p class="desc">Diagnóstico com scanner, bateria, alternador, velas e sistema de injeção.</p>
+                    </div>
+                    <div class="svc">
+                        <button class="top" aria-expanded="false">Alinhamento e balanceamento</button>
+                        <p class="desc">Ajuste das rodas para mais segurança, menos vibração e maior vida útil dos pneus.</p>
+                    </div>
+                </div>
+                <h3>Nossa equipe</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Eduardo</th>
+                            <th>Henrique</th>
+                            <th>Carlos</th>
+                            <th>Marcos</th>
+                            <th>Rafael</th>
+                            <th>Juliana</th>
+                            <th>Bruno</th>
+                            <th>André</th>
+                            <th>Thiago</th>
+                            <th>Patrícia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gerente da oficina</td>
+                            <td>Financeiro e compras</td>
+                            <td>Mecânico</td>
+                            <td>Mecânico</td>
+                            <td>Mecânico</td>
+                            <td>Mecânico</td>
+                            <td>Mecânico</td>
+                            <td>Mecânico</td>
+                            <td>Recepcionista</td>
+                            <td>Recepcionista</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Nossos horários</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Horário</th>
+                            <th>Segunda-Feira</th>
+                            <th>Terça-Feira</th>
+                            <th>Quarta-Feira</th>
+                            <th>Quinta-Feira</th>
+                            <th>Sexta-Feira</th>
+                            <th>Funcionários</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">08:00h - 10:30h</th>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Eduardo, Henrique, Carlos, Marcos, Rafael, Juliana, Bruno, André, Thiago, Patrícia</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10:30h - 12:00h</th>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Henrique, Juliana, Bruno, André, Patrícia</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12:00h - 13:30h</th>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Eduardo, Carlos, Marcos, Rafael, Thiago</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13:30h - 18:00h</th>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Aberto</td>
+                            <td>Eduardo, Henrique, Carlos, Marcos, Rafael, Juliana, Bruno, André, Thiago, Patrícia</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="contato">
+                <h2 class="s">Contato</h2>
+                <h3>Entre em contato</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4 class="ic">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/>
+                            </svg>
+                            WhatsApp
+                        </h4>
+                        <p>(41) 93456-7890</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="ic">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11 11 0 003.6.6 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.4.6 3.6a1 1 0 01-.25 1z"/>
+                            </svg>
+                            Telefone fixo
+                        </h4>
+                        <p>(41) 3456-7890</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="ic">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/>
+                            </svg>
+                            E-mail
+                        </h4>
+                        <p>contato@autoveloz.com.br</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="ic">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 21l-1.4-1.3C5.4 15.4 2 12.3 2 8.5 2 5.4 4.4 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3 19.6 3 22 5.4 22 8.5c0 3.8-3.4 6.9-8.6 11.2z"/>
+                            </svg>
+                            Redes sociais
+                        </h4>
+                        <p>@autocenterveloz</p>
+                    </div>
+                </div>
+                <h3>Ou solicite agora mesmo</h3>
+                <form id="f-agenda" class="duas">
+                    <label>
+                        Nome
+                        <input name="nome" required>
+                    </label>
+                    <label>
+                        Número ou e-mail para contato
+                        <input name="contato" required>
+                    </label>
+                    <label>
+                        Placa do veículo
+                        <input name="placa" maxlength="8" required>
+                    </label>
+                    <label>
+                        Descrição do problema
+                        <textarea name="problema" rows="3" required></textarea>
+                    </label>
+                    <button>Enviar</button>
+                    <p id="m-agenda" class="msg" role="status"></p>
+                </form>
+            </section>
+            <section id="status">
+                <h2 class="s">Status</h2>
+                <h3>Verifique o status dos seus veículos</h3>
+                <div id="meus"></div>
+                <div id="area-placa">
+                    <h3 id="t-consulta">Informe a placa do carro</h3>
+                    <form id="f-consulta" class="duas">
+                        <label>
+                            Placa
+                            <input name="placa" maxlength="8" required>
+                        </label>
+                        <label>
+                            Protocolo (entregue na recepção)
+                            <input name="protocolo" required>
+                        </label>
+                        <button>Consultar</button>
+                        <p id="m-consulta" class="msg" role="status"></p>
+                    </form>
+                    <div id="consulta"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div>
+                <h4>Institucional</h4>
+                <a href="garantia.html">Garantia</a>
+                <a href="sobre-nos.html">Sobre Nós</a>
+            </div>
+            <div>
+                <h4>Meios de pagamento</h4>
+                <div class="pgs">
+                    <img class="pg" src="img/pagamento/visa.webp" alt="Visa" title="Visa">
+                    <img class="pg" src="img/pagamento/mastercard.webp" alt="Mastercard" title="Mastercard">
+                    <img class="pg" src="img/pagamento/hipercard.webp" alt="Hipercard" title="Hipercard">
+                    <img class="pg" src="img/pagamento/elo.webp" alt="Elo" title="Elo">
+                    <img class="pg" src="img/pagamento/amex.webp" alt="American Express" title="American Express">
+                    <span class="pg" title="Boleto">
+                        <svg width="30" height="22" viewBox="0 0 30 22">
+                            <rect width="2" height="22"/>
+                            <rect x="4" width="1" height="22"/>
+                            <rect x="7" width="3" height="22"/>
+                            <rect x="12" width="1" height="22"/>
+                            <rect x="15" width="2" height="22"/>
+                            <rect x="19" width="1" height="22"/>
+                            <rect x="22" width="3" height="22"/>
+                            <rect x="27" width="2" height="22"/>
+                        </svg>
+                    </span>
+                    <img class="pg" src="img/pagamento/pix.webp" alt="Pix" title="Pix">
+                    <span class="pg" title="Dinheiro (à vista)">R$</span>
+                </div>
+                <p class="nota">Dinheiro na hora, débito e crédito em até 6x</p>
+            </div>
+            <div>
+                <h4>Trabalhe conosco</h4>
+                <a href="mailto:rh@autoveloz.com.br">rh@autoveloz.com.br</a>
+            </div>
+            <div>
+                <h4>Endereço</h4>
+                <p>Rua do Zeca, 123, Centro</p>
+                <h4>Número</h4>
+                <p>(41) 3456-7890</p>
+            </div>
+            <div>
+                <h4>Redes sociais</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </footer>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
